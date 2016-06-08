@@ -1,12 +1,11 @@
-var app = angular.module('gameApp', []); 
+var app = angular.module('gameApp', ['angularModalService']); 
 
-app.controller('gameCtrl', ['$scope', '$log', function($scope, $log) {
+app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $log, ModalService) {
 	$scope.$log = $log;
 
 	$scope.title = 'Jeopardy';
 	$scope.showQuestion = function(QandA) {
 		$log.log(QandA);
-
 	}
 	$scope.round = {
 					'name':'Game 1',
@@ -32,4 +31,25 @@ app.controller('gameCtrl', ['$scope', '$log', function($scope, $log) {
 
 								}
 					}
-	}])
+	$scope.show = function(QandA) {
+		$log.log(QandA);
+        ModalService.showModal({
+            templateUrl: 'modal.html',
+            controller: "ModalController"
+        }).then(function(modal) {
+            modal.element.modal();
+            modal.close.then(function(result) {
+                $scope.message = "You said " + result;
+            });
+        });
+    };
+
+	}]);
+
+app.controller('ModalController', function($scope, close) {
+  
+ $scope.close = function(result) {
+ 	close(result, 500); // close, but give 500ms for bootstrap to animate
+ };
+
+});
