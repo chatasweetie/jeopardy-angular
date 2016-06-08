@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src = "controller.js"></script>
+  </head>
+
+  <body ng-app = "gameApp" ng-controller = "gameCtrl" class="container"> 
+    <h1>{{ title }}</h1>
+    <h2>{{ round.name }}</h2>
+
+    <div class="row" style="border: solid black">
+      <category ng-repeat="(key, value) in round['categories']" class="col-xs-2">
+        <div style="border: solid blue"> {{ key }} 
+        </div>
+      </category>
+    </div>
+    <div class="row" style="border: solid black">
+      <category ng-repeat="(cat, questionSet) in round['categories']" class="col-xs-2">
+            <question ng-repeat="(dollars, QandA) in questionSet">
+                 <div class="row" style="border: solid red" ng-click='showQuestion(QandA)'>
+                  {{ dollars }} 
+                 </div>
+            </question>
+        </div>
+      </category>
+    </div>
+  </body>
+
+
+</html>
