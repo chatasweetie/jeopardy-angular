@@ -18,7 +18,7 @@ body {
 }
 
 .header {
-    color: red;
+    color: #F92727;
     background: #B6B6B6;
     font-size: 20pt;
     font-weight: bold;
@@ -26,10 +26,10 @@ body {
 }
 
 .questions {
-    background: #A70505;
+    background: #B52525;
 }
 .screen {
-    background: red; /* For browsers that do not support gradients */
+    background: #F92727; /* For browsers that do not support gradients */
     background-image: 
         linear-gradient(
             silver,
@@ -52,5 +52,12 @@ body {
     font-weight: bold;
     display: inline-block;
     text-shadow: 2px 2px 2px #000;
+}
+.results {
+    font-size: 20pt;
+    font-weight: bold;
+}
 
+hr {
+    line-height: -5px;
 }

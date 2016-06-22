@@ -26,24 +26,26 @@
                  <div class="row">
                     <div class="col-xs-12">
                         <div class="screen" ng-click='showQ(QandA, dollars)'>
-                          <span class="dollars">{{ dollars }}</span>
+                          <span class="dollars">${{ dollars }}</span>
                         </div>
                     </div>
                  </div>
             </question>
       </category>
     </div>
-    <div class="row footer">
+    <div class="row results">
       <div class="col-xs-3 col-xs-offset-2">
-        <p>
-          {{ player1.name }} <br>
-          {{ player1.score}}
-        </p>
+        <div class="screen">
+          <p>
+            {{ player1.name }}<br>
+            $ {{ player1.score}}
+          </p>
+        </div>
       </div>
       <div class="col-xs-3 col-xs-offset-2">
-        <p>
+        <p class="screen">
           {{ player2.name }} <br>
-          {{ player2.score}}
+          $ {{ player2.score}}
         </p>
       </div>
     </div>
