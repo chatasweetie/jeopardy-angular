@@ -17,38 +17,74 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
 												'100':
 													{'Question 1': 'Answer 1'},
 												'200':
-													{'Question 2' : 'Answer 2'}
+													{'Question 2' : 'Answer 2'},
+                                                '300':
+                                                    {'Question 2' : 'Answer 2'},
+                                                '400':
+                                                    {'Question 2' : 'Answer 2'},
+                                                '500':
+                                                    {'Question 2' : 'Answer 2'},
 												},
 								'TV': {
 												'100':
-													{'Question TV 1': 'Answer TV 1'},
-												'200':
-													{'Question TV 2' : 'Answer TV 2'}
+                                                    {'A weekly television series on NBC was the first to air completely in color in 1959': 'What is the show Bonanza?'},
+                                                '200':
+                                                    {'The family name of the main characters in the Cosby Show which ran from 1984-1992' : 'What is The Huxtable Family?'},
+                                                '300':
+                                                    {'A popular children show that debuted on PBS in 1969' : 'What is Sesame Street?'},
+                                                '400':
+                                                    {'The breakout star who played Stella Carlin on the third season of Orange Is the New Black' : 'Who is Ruby Rose?'},
+                                                '500':
+                                                    {'The last guest on the Late Show with David Letterman.' : 'Who is Bill Murray?'},
 												},
 								'Movies' : {
 												'100':
-													{'Question Movie 1': 'Answer Movie 1'},
-												'200':
-													{'Question Movie 2' : 'Answer Movie 2'}
+                                                    {'Sings the theme song for "Spectre", the new James Bond film': 'Who is Sam Smith?'},
+                                                '200':
+                                                    {'Charlize Theron played this bad-ass character in "Mad Max: Fury Road".' : 'Who is Furiosa?'},
+                                                '300':
+                                                    {'Won the Best Picture at the 2015 Academy Awards' : 'What is Birdman?'},
+                                                '400':
+                                                    {'Amy Schumers well-received comedy "Trainwreck" co-starred which famous NBA player' : 'Who is LEBRON JAMES?'},
+                                                '500':
+                                                    {'Cast as Belle in the upcoming Disney live-action "Beauty and the Beast"' : 'Who is EMMA WATSON?'},
 												},
 								
-                                'HB Pets': {
+                                'Support Staff': {
                                                 '100':
-                                                    {'Question Pets 1': 'Answer Pets1'},
+                                                    {'Question 1': 'Answer 1'},
                                                 '200':
-                                                    {'Question Pets2' : 'Answer Pets2'}
+                                                    {'Question 2' : 'Answer 2'},
+                                                '300':
+                                                    {'Question 2' : 'Answer 2'},
+                                                '400':
+                                                    {'Question 2' : 'Answer 2'},
+                                                '500':
+                                                    {'Question 2' : 'Answer 2'},
                                                 },
                                 'Harry Potter': {
                                                 '100':
-                                                    {'Question HP 1': 'Answer HP 1'},
+                                                    {'Question 1': 'Answer 1'},
                                                 '200':
-                                                    {'Question HP 2' : 'Answer HP 2'}
+                                                    {'Question 2' : 'Answer 2'},
+                                                '300':
+                                                    {'Question 2' : 'Answer 2'},
+                                                '400':
+                                                    {'Question 2' : 'Answer 2'},
+                                                '500':
+                                                    {'Question 2' : 'Answer 2'},
                                                 },
                                 'Python' : {
                                                 '100':
-                                                    {'Question Python 1': 'Answer Python 1'},
+                                                    {'Question 1': 'Answer 1'},
                                                 '200':
-                                                    {'Question Python 2' : 'Answer Python 2'}
+                                                    {'Question 2' : 'Answer 2'},
+                                                '300':
+                                                    {'Question 2' : 'Answer 2'},
+                                                '400':
+                                                    {'Question 2' : 'Answer 2'},
+                                                '500':
+                                                    {'Question 2' : 'Answer 2'},
                                                 },
                                 }			
                     };
