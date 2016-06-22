@@ -1,11 +1,17 @@
 body {
     background: gray;
     text-align: center;
-
+    font-family: 'Impact', sans-serif;
 }
 @font-face {
     font-family: 'gyparody';
     src: url('fonts/gyparody.ttf')
+    format('truetype');
+}
+
+@font-face {
+    font-family: 'korinna';
+    src: url('fonts/KorrinaBold.ttf')
     format('truetype');
 }
 
@@ -20,7 +26,7 @@ body {
 .header {
     color: #F92727;
     background: #B6B6B6;
-    font-size: 20pt;
+    font-size: 23pt;
     font-weight: bold;
     padding: 10px 0 10px 0;
 }
