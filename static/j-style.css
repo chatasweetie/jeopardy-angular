@@ -58,6 +58,15 @@ body {
     font-weight: bold;
 }
 
-hr {
-    line-height: -5px;
+.modal-content {
+    height: auto;
+}
+
+.modal p {
+    font-family: 'gyparody', sans-serif;
+}
+
+.btn{
+    border: solid silver;
+    border-radius: 10px;
 }
