@@ -4,6 +4,7 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
 	$scope.$log = $log;
     $scope.player1 = {'name': 'Player 1', 'score': 0};
     $scope.player2 = {'name': 'Player 2', 'score': 0};
+    $scope.showOption = true;
 
 	$scope.title = 'Jeopardy';
 	$scope.showQuestion = function(QandA) {

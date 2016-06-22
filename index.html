@@ -25,8 +25,10 @@
             <question ng-repeat="(dollars, QandA) in questionSet">
                  <div class="row">
                     <div class="col-xs-12">
-                        <div class="screen" ng-click='showQ(QandA, dollars)'>
+                        <div ng-show="showOption" class="screen" ng-click='showQ(QandA, dollars); showOption = !showOption;'>
                           <span class="dollars">${{ dollars }}</span>
+                        </div>
+                        <div ng-show="!showOption" class="screen">
                         </div>
                     </div>
                  </div>
