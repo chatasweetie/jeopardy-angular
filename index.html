@@ -54,21 +54,21 @@
          <div class="modal fade">
           <div class="modal-dialog">
             <div class="modal-content screen dollars">
-                <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
               <div class="modal-body">
+                <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <p>{{ currentQ | uppercase }}</p>
               <div class="col-xs-6">
                 <fieldset ng-disabled="wrong1">
-                  <button type="button" ng-click="close(player1)" class="btn btn-success" data-dismiss="modal">{{ player1.name | uppercase }}</button>
-                  <button type="button" ng-click="loss(player1, dollars); wrong1=true" class="btn btn-danger">{{ player1.name | uppercase }}</button>
+                  <button type="button" ng-click="close(player1)" class="btn btn-success playerbtn" data-dismiss="modal">{{ player1.name | uppercase }}</button>
+                  <button type="button" ng-click="loss(player1, dollars); wrong1=true" class="btn btn-danger playerbtn">{{ player1.name | uppercase }}</button>
                 </fieldset>
               </div>
               <div class="col-xs-6">
                 <fieldset ng-disabled="wrong2">
-                  <button type="button" ng-click="close(player2)" class="btn btn-success" data-dismiss="modal" ng-disabled="wrong2">{{ player2.name | uppercase }}</button>
-                  <button type="button" ng-click="loss(player2, dollars); wrong2=true" class="btn btn-danger" ng-disabled="wrong2">{{ player2.name | uppercase }}</button>
+                  <button type="button" ng-click="close(player2)" class="btn btn-success playerbtn" data-dismiss="modal" ng-disabled="wrong2">{{ player2.name | uppercase }}</button>
+                  <button type="button" ng-click="loss(player2, dollars); wrong2=true" class="btn btn-danger playerbtn" ng-disabled="wrong2">{{ player2.name | uppercase }}</button>
                 </fieldset>
-              </div>
+ 
             </div>
           </div>
         </div>
