@@ -54,3 +54,16 @@ body {
     text-shadow: 2px 2px 2px #000;
 
 }
+
+.modal-content {
+    height: auto;
+}
+
+.modal p {
+    font-family: 'gyparody', sans-serif;
+}
+
+.btn{
+    border: solid silver;
+    border-radius: 10px;
+}
