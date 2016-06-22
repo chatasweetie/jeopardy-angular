@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/j-style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://code.angularjs.org/1.4.9/angular.min.js"></script>
@@ -13,17 +14,21 @@
     <h1>{{ title }}</h1>
     <h2>{{ round.name }}</h2>
 
-    <div class="row" style="border: solid black">
-      <category ng-repeat="(key, value) in round['categories']" class="col-xs-2">
-        <div style="border: solid blue"> {{ key }} 
+    <div class="row header">
+      <category ng-repeat="(key, value) in round['categories']">
+        <div class="col-xs-2"> <div class="screen" >{{ key }}</div>
         </div>
       </category>
     </div>
-    <div class="row" style="border: solid black">
+    <div class="row questions">
       <category ng-repeat="(cat, questionSet) in round['categories']" class="col-xs-2">
             <question ng-repeat="(dollars, QandA) in questionSet">
-                 <div class="row" style="border: solid red" ng-click='showQ(QandA, dollars)'>
-                  {{ dollars }} 
+                 <div class="row">
+                    <div class="col-xs-12">
+                        <div class="screen" ng-click='showQ(QandA, dollars)'>
+                          <span class="dollars">{{ dollars }}</span>
+                        </div>
+                    </div>
                  </div>
             </question>
       </category>
@@ -64,7 +69,7 @@
                   <button type="button" ng-click="close(player2)" class="btn btn-success" data-dismiss="modal" ng-disabled="wrong2">{{ player2.name }}</button>
                   <button type="button" ng-click="loss(player1, dollars); wrong2=true" class="btn btn-danger" ng-disabled="wrong2">{{ player2.name }}</button>
                 </fieldset>
-                
+
               </div>
             </div>
           </div>

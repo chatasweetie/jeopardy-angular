@@ -4,8 +4,6 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
 	$scope.$log = $log;
     $scope.player1 = {'name': 'Player 1', 'score': 0};
     $scope.player2 = {'name': 'Player 2', 'score': 0};
-    // $scope.wrong1 = true;
-    // $scope.wrong2 = true;
 
 	$scope.title = 'Jeopardy';
 	$scope.showQuestion = function(QandA) {
@@ -32,8 +30,27 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
 												'200':
 													{'Question Movie 2' : 'Answer Movie 2'}
 												},
-								}
-					};
+								
+                                'HB Pets': {
+                                                '100':
+                                                    {'Question Pets 1': 'Answer Pets1'},
+                                                '200':
+                                                    {'Question Pets2' : 'Answer Pets2'}
+                                                },
+                                'Harry Potter': {
+                                                '100':
+                                                    {'Question HP 1': 'Answer HP 1'},
+                                                '200':
+                                                    {'Question HP 2' : 'Answer HP 2'}
+                                                },
+                                'Python' : {
+                                                '100':
+                                                    {'Question Python 1': 'Answer Python 1'},
+                                                '200':
+                                                    {'Question Python 2' : 'Answer Python 2'}
+                                                },
+                                }			
+                    };
     $scope.loss = function(player, dollars) {
         player.score -= Number(dollars);
         $log.log(player.name + " " + player.score);

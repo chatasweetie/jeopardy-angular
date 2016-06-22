@@ -1,0 +1,33 @@
+body {
+    background: gray;
+}
+
+.header {
+    background: #B6B6B6;
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+}
+
+.questions {
+    background: #A70505;
+}
+.screen {
+    background: #C6C6C6;
+    border: solid red;
+    text-align: center;
+    height: 120px;
+    margin: 5px 0 5px 0;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.dollars {
+    color: white;
+    font-size: 40pt;
+    font-weight: bold;
+    display: inline-block;
+    text-shadow: 2px 2px 2px #000;
+
+}
