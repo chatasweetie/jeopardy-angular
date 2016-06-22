@@ -11,12 +11,12 @@
   </head>
 
   <body ng-app = "gameApp" ng-controller = "gameCtrl" class="container"> 
-    <h1>{{ title }}</h1>
-    <h2>{{ round.name }}</h2>
+    <h1 class="title">{{ title }}</h1>
+    <p><b>{{ round.name }}</b></p>
 
     <div class="row header">
       <category ng-repeat="(key, value) in round['categories']">
-        <div class="col-xs-2"> <div class="screen" >{{ key }}</div>
+        <div class="col-xs-2"> <div class="screen categories" >{{ key }}</div>
         </div>
       </category>
     </div>
