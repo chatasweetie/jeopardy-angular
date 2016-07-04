@@ -14,15 +14,14 @@ body {
     src: url('fonts/KorinnaBold.ttf')
     format('truetype');
 }
+
 .modal-content {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 200px;
 }
-.modal-dialog {
-     width: 1600px; 
-}
+
 #splash {
     background-image: url("jeopardybg.jpg");
     height: 600px;
