@@ -10,7 +10,7 @@
     <script src = "controller.js"></script>
   </head>
 
-  <body ng-app = "gameApp" ng-controller = "gameCtrl" class="container"> 
+  <body ng-app = "gameApp" ng-controller = "gameCtrl" ng-init="init()" class="container"> 
     <h1 class="title">{{ title }}</h1>
     <p><b>{{ round.name }}</b></p>
 
@@ -52,6 +52,15 @@
       </div>
     </div>
     <!-- The actual modal template, just a bit o bootstrap -->
+      <script type="text/ng-template" id="splash.html">
+         <div class="modal fade">
+            <div class="modal-content" id="splash">
+              <div class="modal-body">
+                <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="btn" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">Let's Play!</button>
+            </div>
+        </div>
+     </script>
      <script type="text/ng-template" id="question.html">
          <div class="modal fade">
           <div class="modal-dialog">

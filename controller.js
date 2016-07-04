@@ -88,6 +88,17 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
                                                 },
                                 }			
                     };
+    $scope.init = function(){
+        ModalService.showModal({
+            templateUrl: 'splash.html',
+            controller: 'ModalController',
+            scope: $scope,
+        }).then(function(modal) {
+            modal.element.modal();
+            modal.close.then(function(result) {
+            });
+        });
+    }
     $scope.loss = function(player, dollars) {
         player.score -= Number(dollars);
         $log.log(player.name + " " + player.score);
