@@ -15,13 +15,6 @@ body {
     format('truetype');
 }
 
-.modal-content {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
-}
-
 #splash {
     background-image: url("jeopardybg.jpg");
     height: 600px;
@@ -44,7 +37,7 @@ body {
 }
 
 .questions {
-    background: #B52525;
+    background: #ca1919;
 }
 .screen {
     background: #F92727; /* For browsers that do not support gradients */
@@ -59,18 +52,20 @@ body {
     margin: 10px 0 5px 0;
     border-radius: 10px;
     padding: 20px 5px 20px 5px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .categories {
     background: white;
 }
+
 .dollars {
     color: white;
     font-size: 40pt;
-    font-weight: bold;
-    display: inline-block;
     text-shadow: 2px 2px 2px #000;
 }
+
 .results {
     font-size: 20pt;
     font-weight: bold;
@@ -78,11 +73,16 @@ body {
 
 .modal-content {
     height: auto;
-    padding: 50px 50px 50px 50px;
+    padding: 20px 50px 50px 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
 }
 
 .modal p {
     font-family: 'korinna', sans-serif;
+    padding: 20px 0 20px 0;
 }
 
 .playerbtn{
