@@ -83,11 +83,18 @@ body {
 .modal p {
     font-family: 'korinna', sans-serif;
     padding: 20px 0 20px 0;
+    font-size: 35px;
 }
 
-.playerbtn{
+.splash-btn {
+    margin-top: 390px;
+    font-size: 78px;
+}
+
+.playerbtn {
     border: solid silver;
     border-radius: 10px;
+    font-size: 18px;
 }
 
 .modal-dialog {
