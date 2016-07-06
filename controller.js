@@ -27,27 +27,27 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
 												},
 								'TV': {
 												'100':
-                                                    {'What is the show Bonanza?': 'A weekly television series on NBC was the first to air completely in color in 1959'},
+                                                    {'A weekly television series on NBC was the first to air completely in color in 1959': 'What is the show Bonanza?'},
                                                 '200':
-                                                    {'What is The Huxtable Family?' : 'The family name of the main characters in the Cosby Show which ran from 1984-1992'},
+                                                    {'The family name of the main characters in the Cosby Show which ran from 1984-1992' : 'What is The Huxtable Family?'},
                                                 '300':
-                                                    {'What is Sesame Street?' : 'A popular children show that debuted on PBS in 1969'},
+                                                    {'A popular children show that debuted on PBS in 1969' : 'What is Sesame Street?'},
                                                 '400':
-                                                    {'Who is Ruby Rose?' : 'The breakout star who played Stella Carlin on the third season of Orange Is the New Black'},
+                                                    {'The breakout star who played Stella Carlin on the third season of Orange Is the New Black' : 'Who is Ruby Rose?'},
                                                 '500':
-                                                    {'Who is Bill Murray?' : 'The last guest on the Late Show with David Letterman'},
+                                                    {'The last guest on the Late Show with David Letterman' : 'Who is Bill Murray?'},
 												},
 								'Movies' : {
 												'100':
-                                                    {'Who is Sam Smith?': 'Sings the theme song for "Spectre", the new James Bond film'},
+                                                    {'Sings the theme song for "Spectre", the new James Bond film': 'Who is Sam Smith?'},
                                                 '200':
-                                                    {'Who is Furiosa?' : 'Charlize Theron played this bad-ass character in "Mad Max: Fury Road"'},
+                                                    {'Charlize Theron played this bad-ass character in "Mad Max: Fury Road"' : 'Who is Furiosa?'},
                                                 '300':
-                                                    {'What is Birdman?' : 'Won the Best Picture at the 2015 Academy Awards'},
+                                                    {'Won the Best Picture at the 2015 Academy Awards' : 'What is Birdman?'},
                                                 '400':
-                                                    {'Who is Lebron James?' : 'Amy Schumers well-received comedy "Trainwreck" co-starred which famous NBA player'},
+                                                    {'Amy Schumers well-received comedy "Trainwreck" co-starred which famous NBA player' : 'Who is Lebron James?'},
                                                 '500':
-                                                    {'Who is Emma Watson?' : 'Cast as Belle in the upcoming Disney live-action "Beauty and the Beast"'},
+                                                    {'Cast as Belle in the upcoming Disney live-action "Beauty and the Beast"' : 'Who is Emma Watson?'},
 												},
 								
                                 'Python': {
