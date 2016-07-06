@@ -84,7 +84,7 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
                                                 '400':
                                                     {'This person\s great-great-great uncle was president of Mexico' : 'Who is Leslie?'},
                                                 '500':
-                                                    {'ANSWER' : 'Who is Jessica?'},
+                                                    {'Bungy jumped off the 3rd largest bungy jump distance in the world' : 'Who is Ally?'},
                                                 },
                                 }			
                     };
