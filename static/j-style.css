@@ -99,3 +99,10 @@ body {
 
 .modal-dialog {
     margin: 10% auto;
+}
+
+.finaljbtn{
+    margin-top: 10px;
+    border-radius: 10px;
+    border: solid red;
+}

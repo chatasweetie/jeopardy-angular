@@ -2,9 +2,11 @@ var app = angular.module('gameApp', ['angularModalService']);
 
 app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $log, ModalService) {
 	$scope.$log = $log;
-    $scope.player1 = {'name': 'Player 1', 'score': 0};
-    $scope.player2 = {'name': 'Player 2', 'score': 0};
+    $scope.player1 = {'name': 'Player 1', 'score': 0, 'bet': 0};
+    $scope.player2 = {'name': 'Player 2', 'score': 0, 'bet': 0};
     $scope.showOption = true;
+
+
 
 	$scope.title = 'Jeopardy!';
 	$scope.showQuestion = function(QandA) {
@@ -88,6 +90,12 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
                                                 },
                                 }			
                     };
+
+    $scope.finaljeopardy = {
+        'question': 'A style guide for python, its acronym is PEP',
+        'answer': 'What is Python Enhancement Proposals?'
+    }
+
     $scope.init = function(){
         ModalService.showModal({
             templateUrl: 'splash.html',
@@ -126,6 +134,9 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
             // });
         });
     };
+    $scope.showFinal = function(){
+        
+    }
 
     $scope.showA = function() {
         ModalService.showModal({

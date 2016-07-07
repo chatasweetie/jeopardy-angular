@@ -44,7 +44,11 @@
           </p>
         </div>
       </div>
-      <div class="col-xs-3 col-xs-offset-2">
+      <div class="col-xs-2">
+        <button type="button" class="finaljbtn" ng-click="showFinal">Final Jeopardy</button>
+        
+      </div>
+      <div class="col-xs-3">
         <p class="screen">
           {{ player2.name }} <br>
           $ {{ player2.score}}
@@ -57,7 +61,7 @@
             <div class="modal-content" id="splash">
               <div class="modal-body">
                 <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <button type="button" class="btn splash-btn" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">Let's Play!</button>
+                <button type="button" class="btn splash-btn" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">Lets Play!</button>
             </div>
         </div>
      </script>
