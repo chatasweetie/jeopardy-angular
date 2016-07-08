@@ -5,8 +5,8 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
     $scope.player1 = {'name': 'Player 1', 'score': 0, 'bet': 0};
     $scope.player2 = {'name': 'Player 2', 'score': 0, 'bet': 0};
     $scope.showOption = true;
-
-
+    $scope.questionsDone = 0;
+    $scope.FinalJeopardy = false;
 
 	$scope.title = 'Jeopardy!';
 	$scope.showQuestion = function(QandA) {
@@ -128,10 +128,6 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
                 $scope.showA();
                 $log.log(player.name + " " + player.score);
             });
-            // modal.loss.then(function(player) {
-            //     player.score -= Number(dollars);
-            //     $log.log(player.name + " " + player.score);
-            // });
         });
     };
     $scope.showFinal = function(){
@@ -146,6 +142,10 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
         }).then(function(modal) {
             modal.element.modal();
             modal.close.then(function(result) {
+                $scope.questionsDone++;
+                if ($scope.questionsDone === 30) {
+                    $scope.FinalJeopardy = true;
+                }
             });
         });
     };
