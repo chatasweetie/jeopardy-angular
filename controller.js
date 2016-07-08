@@ -112,6 +112,7 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
         $log.log(player.name + " " + player.score);
     };
 	$scope.showQ = function(QandA, dollars) {
+        $scope.questionsDone++;
         ModalService.showModal({
             templateUrl: 'question.html',
             controller: "ModalController",
@@ -142,7 +143,7 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
         }).then(function(modal) {
             modal.element.modal();
             modal.close.then(function(result) {
-                $scope.questionsDone++;
+                $log.log($scope.questionsDone);
                 if ($scope.questionsDone === 30) {
                     $scope.FinalJeopardy = true;
                 }
