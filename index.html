@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="col-xs-2">
-        <button type="button" class="finaljbtn" ng-show="FinalJeopardy" ng-click="showFinal">Final Jeopardy</button>
+        <button type="button" class="finaljbtn" ng-show="FinalJeopardy" ng-click="showFinal()">Final Jeopardy</button>
         
       </div>
       <div class="col-xs-3">
@@ -100,5 +100,29 @@
           </div>
         </div>
      </script>
+     <script type="text/ng-template" id="finaljeopardyQ.html">
+      <div class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content screen dollars">
+            <div class="modal-body">
+              <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <p>{{ finaljeopardy.question }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script type="text/ng-template" id="finalanswer.html">
+      <div class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content screen dollars">
+            <div class="modal-body">
+              <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <p>{{ finaljeopardy.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
   </body>
 </html>

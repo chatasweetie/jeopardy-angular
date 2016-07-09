@@ -93,7 +93,7 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
 
     $scope.finaljeopardy = {
         'question': 'A style guide for python, its acronym is PEP',
-        'answer': 'What is Python Enhancement Proposals?'
+        'answer': 'What are Python Enhancement Proposals?'
     }
 
     $scope.init = function(){
@@ -127,13 +127,9 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
             modal.close.then(function(player) {
                 player.score += Number(dollars);
                 $scope.showA();
-                $log.log(player.name + " " + player.score);
             });
         });
     };
-    $scope.showFinal = function(){
-        
-    }
 
     $scope.showA = function() {
         ModalService.showModal({
@@ -147,6 +143,31 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
                 if ($scope.questionsDone === 30) {
                     $scope.FinalJeopardy = true;
                 }
+            });
+        });
+    };
+
+    $scope.showFinal = function(){
+        ModalService.showModal({
+            templateUrl: 'finaljeopardyQ.html',
+            controller: 'ModalController',
+            scope: $scope,
+        }).then(function(modal) {
+            modal.element.modal();
+            modal.close.then(function(result) {
+                $scope.showFinalA();
+            });
+        });
+    };
+
+    $scope.showFinalA = function() {
+        ModalService.showModal({
+            templateUrl: 'finalanswer.html',
+            controller: 'ModalController',
+            scope: $scope,
+        }).then(function(modal){
+            modal.element.modal();
+            modal.close.then(function(result) {
             });
         });
     };
