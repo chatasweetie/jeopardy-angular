@@ -107,10 +107,19 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
             });
         });
     }
+
     $scope.loss = function(player, dollars) {
         player.score -= Number(dollars);
         $log.log(player.name + " " + player.score);
     };
+
+    $scope.bet = function(player1bet, player2bet) {
+        $scope.player1.bet = Number(player1bet);
+        $scope.player2.bet = Number(player2bet);
+        $log.log($scope.player1);
+        $log.log($scope.player2);
+    };
+
 	$scope.showQ = function(QandA, dollars) {
         $scope.questionsDone++;
         ModalService.showModal({
@@ -143,6 +152,20 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
                 if ($scope.questionsDone === 30) {
                     $scope.FinalJeopardy = true;
                 }
+            });
+        });
+    };
+
+    $scope.showBetting = function(){
+        ModalService.showModal({
+            templateUrl: 'bettingfinal.html',
+            controller: 'ModalController',
+            scope: $scope,
+        }).then(function(modal) {
+            modal.element.modal();
+            modal.close.then(function(result) {
+                $log.log(result)
+                $scope.showFinal();
             });
         });
     };

@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="col-xs-2">
-        <button type="button" class="finaljbtn" ng-show="FinalJeopardy" ng-click="showFinal()">Final Jeopardy</button>
+        <button type="button" class="finaljbtn" ng-show="FinalJeopardy" ng-click="showBetting()">Final Jeopardy</button>
         
       </div>
       <div class="col-xs-3">
@@ -83,7 +83,6 @@
                   <button type="button" ng-click="close(player2)" class="btn btn-success playerbtn" data-dismiss="modal" ng-disabled="wrong2">{{ player2.name | uppercase }}</button>
                   <button type="button" ng-click="loss(player2, dollars); wrong2=true" class="btn btn-danger playerbtn" ng-disabled="wrong2">{{ player2.name | uppercase }}</button>
                 </fieldset>
- 
             </div>
           </div>
         </div>
@@ -100,6 +99,31 @@
           </div>
         </div>
      </script>
+     <script type="text/ng-template" id="bettingfinal.html">
+      <div class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content screen dollars">
+            <div class="modal-body">
+              <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <form name="myForm">
+                  <p>Player 1 Score: {{ player1.score }}</p>
+                  <label>Player 1 Bet: 
+                    <input class="black" type="text" name="input" ng-model="player1bet" required ng-trim="false">
+                  </label>
+                  <code>$scope.player1.bet = {{ player1bet }}</code><br/>
+                  <p>Player 2 Score: {{ player2.score }}</p>
+                  <label>Player 2 Bet: 
+                    <input class="black" type="text" name="input" ng-model="player2bet"
+                           ng-pattern="example.word" required ng-trim="false">
+                  </label>
+                  <code>player2bet = {{ player2bet }}</code><br/>
+                 </form>
+                 <button type="button" ng-click="bet(player1bet, player2bet); close()" class="btn btn-success playerbtn">Lets Play</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
      <script type="text/ng-template" id="finaljeopardyQ.html">
       <div class="modal fade">
         <div class="modal-dialog">
@@ -119,6 +143,18 @@
             <div class="modal-body">
               <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
               <p>{{ finaljeopardy.answer }}</p>
+              <div class="col-xs-6">
+                <fieldset ng-disabled="wrong1">
+                  <button type="button" ng-click="close(player1)" class="btn btn-success playerbtn" data-dismiss="modal">{{ player1.name | uppercase }}</button>
+                  <button type="button" ng-click="loss(player1, dollars); wrong1=true" class="btn btn-danger playerbtn">{{ player1.name | uppercase }}</button>
+                </fieldset>
+              </div>
+              <div class="col-xs-6">
+                <fieldset ng-disabled="wrong2">
+                  <button type="button" ng-click="close(player2)" class="btn btn-success playerbtn" data-dismiss="modal" ng-disabled="wrong2">{{ player2.name | uppercase }}</button>
+                  <button type="button" ng-click="loss(player2, dollars); wrong2=true" class="btn btn-danger playerbtn" ng-disabled="wrong2">{{ player2.name | uppercase }}</button>
+                </fieldset>
+            </div>
             </div>
           </div>
         </div>

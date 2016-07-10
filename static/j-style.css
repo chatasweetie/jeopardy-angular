@@ -106,3 +106,7 @@ body {
     border-radius: 10px;
     border: solid red;
 }
+
+.black {
+    color: black;
+}
