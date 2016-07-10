@@ -9,6 +9,7 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
     $scope.FinalJeopardy = false;
     $scope.finalRespond1 = true;
     $scope.finalRespond2 = true;
+    $scope.winner = '';
 
 	$scope.title = 'Jeopardy!';
 	$scope.showQuestion = function(QandA) {
@@ -204,16 +205,16 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
             modal.element.modal();
             modal.close.then(function(result) {
                 if ($scope.player1.score > $scope.player2.score){
-                    var winner = "Player 1"
+                    $scope.winner = "Player 1";
                 } else{
-                    var winner = "Player 2"
+                    scope.winner = "Player 2";
                 }
-                $scope.showWinner(winner);
+                $scope.showWinner();
             });
         });
     };
 
-    $scope.showWinnder = function(){
+    $scope.showWinner = function(){
         ModalService.showModal({
             templateUrl: 'winner.html',
             controller: 'ModalController',
