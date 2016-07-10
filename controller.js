@@ -7,6 +7,8 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
     $scope.showOption = true;
     $scope.questionsDone = 0;
     $scope.FinalJeopardy = false;
+    $scope.finalRespond1 = true;
+    $scope.finalRespond2 = true;
 
 	$scope.title = 'Jeopardy!';
 	$scope.showQuestion = function(QandA) {
@@ -113,6 +115,16 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
         $log.log(player.name + " " + player.score);
     };
 
+    $scope.finalloss = function(player) {
+        player.score -= Number(player.bet);
+        $log.log(player.name + " " + player.score);
+    };
+
+    $scope.finalright = function(player) {
+        player.score += Number(player.bet);
+        $log.log(player.name + " " + player.score);
+    };
+
     $scope.bet = function(player1bet, player2bet) {
         $scope.player1.bet = Number(player1bet);
         $scope.player2.bet = Number(player2bet);
@@ -164,7 +176,7 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
         }).then(function(modal) {
             modal.element.modal();
             modal.close.then(function(result) {
-                $log.log(result)
+                $log.log(result);
                 $scope.showFinal();
             });
         });
@@ -189,6 +201,24 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
             controller: 'ModalController',
             scope: $scope,
         }).then(function(modal){
+            modal.element.modal();
+            modal.close.then(function(result) {
+                if ($scope.player1.score > $scope.player2.score){
+                    var winner = "Player 1"
+                } else{
+                    var winner = "Player 2"
+                }
+                $scope.showWinner(winner);
+            });
+        });
+    };
+
+    $scope.showWinnder = function(){
+        ModalService.showModal({
+            templateUrl: 'winner.html',
+            controller: 'ModalController',
+            scope: $scope,
+        }).then(function(modal) {
             modal.element.modal();
             modal.close.then(function(result) {
             });

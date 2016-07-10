@@ -145,15 +145,18 @@
               <p>{{ finaljeopardy.answer }}</p>
               <div class="col-xs-6">
                 <fieldset ng-disabled="wrong1">
-                  <button type="button" ng-click="close(player1)" class="btn btn-success playerbtn" data-dismiss="modal">{{ player1.name | uppercase }}</button>
-                  <button type="button" ng-click="loss(player1, dollars); wrong1=true" class="btn btn-danger playerbtn">{{ player1.name | uppercase }}</button>
+                  <button type="button" ng-click="finalright(player1); wrong1=true" class="btn btn-success playerbtn">{{ player1.name | uppercase }}</button>
+                  <button type="button" ng-click="finalloss(player1); wrong1=true" class="btn btn-danger playerbtn">{{ player1.name | uppercase }}</button>
                 </fieldset>
               </div>
               <div class="col-xs-6">
                 <fieldset ng-disabled="wrong2">
-                  <button type="button" ng-click="close(player2)" class="btn btn-success playerbtn" data-dismiss="modal" ng-disabled="wrong2">{{ player2.name | uppercase }}</button>
-                  <button type="button" ng-click="loss(player2, dollars); wrong2=true" class="btn btn-danger playerbtn" ng-disabled="wrong2">{{ player2.name | uppercase }}</button>
+                  <button type="button" ng-click="finalright(player2); wrong2=true" class="btn btn-success playerbtn">{{ player2.name | uppercase }}</button>
+                  <button type="button" ng-click="finalloss(player2); wrong2=true" class="btn btn-danger playerbtn">{{ player2.name | uppercase }}</button>
                 </fieldset>
+            </div>
+            <div class="col-xs-12">
+                  <button type="button" ng-click="close()" class="btn btn-success playerbtn" data-dismiss="modal">Who Won?</button>
             </div>
             </div>
           </div>
