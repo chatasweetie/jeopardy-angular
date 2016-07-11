@@ -58,7 +58,7 @@
     <!-- The actual modal template, just a bit o bootstrap -->
       <script type="text/ng-template" id="splash.html">
          <div class="modal fade">
-            <div class="modal-content" id="splash">
+            <div class="modal-content start-end" id="splash">
               <div class="modal-body">
                 <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <button type="button" class="btn splash-btn" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">Lets Play!</button>
@@ -107,16 +107,12 @@
               <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <form name="myForm">
                   <p>Player 1 Score: {{ player1.score }}</p>
-                  <label>Player 1 Bet: 
+                  <p>Bet:</p>
                     <input class="black" type="text" name="input" ng-model="player1bet" required ng-trim="false">
-                  </label>
-                  <code>$scope.player1.bet = {{ player1bet }}</code><br/>
                   <p>Player 2 Score: {{ player2.score }}</p>
-                  <label>Player 2 Bet: 
+                  <p>Bet: </p>
                     <input class="black" type="text" name="input" ng-model="player2bet"
                            ng-pattern="example.word" required ng-trim="false">
-                  </label>
-                  <code>player2bet = {{ player2bet }}</code><br/>
                  </form>
                  <button type="button" ng-click="bet(player1bet, player2bet); close()" class="btn btn-success playerbtn">Lets Play</button>
             </div>
@@ -156,7 +152,7 @@
                 </fieldset>
             </div>
             <div class="col-xs-12">
-                  <button type="button" ng-click="close()" class="btn btn-success playerbtn" data-dismiss="modal">Who Won?</button>
+                  <button type="button" ng-click="close()" class="btn btn-success playerbtn whowon" data-dismiss="modal">Who Won?</button>
             </div>
             </div>
           </div>
@@ -165,11 +161,11 @@
     </script>
     <script type="text/ng-template" id="winner.html">
          <div class="modal fade">
-            <div class="modal-content" id="splash">
+            <div class="modal-content start-end">
               <div class="modal-body">
                 <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h2> The Winner is: </h2>
-                <h3> {{ winner }}
+                <h1> The Winner is: </h2>
+                <span class="jumbo"> {{ winner }}
             </div>
         </div>
      </script>

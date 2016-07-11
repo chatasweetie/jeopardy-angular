@@ -17,15 +17,27 @@ body {
 
 #splash {
     background-image: url("jeopardybg.jpg");
+}
+
+.start-end {
     height: 600px;
     width: 1250px;
 }
+
 .title {
     color: white;
     font-family: 'gyparody', sans-serif;
     font-size: 100pt;
     font-weight: bold;
     text-shadow: 2px 2px 2px #000;
+}
+
+.jumbo {
+    font-size: 220px;
+    color: red;
+}
+
+
 }
 
 .header {
@@ -109,4 +121,12 @@ body {
 
 .black {
     color: black;
+}
+
+.whowon {
+    font-size: 80px;
+    margin-top: 300px;
+    height: 160px;
+    width: 580px;
+    margin-left: -50px;
 }

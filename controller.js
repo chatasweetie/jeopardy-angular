@@ -206,8 +206,10 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
             modal.close.then(function(result) {
                 if ($scope.player1.score > $scope.player2.score){
                     $scope.winner = "Player 1";
-                } else{
-                    scope.winner = "Player 2";
+                } else if ($scope.player1.score === $scope.player2.score){
+                    $scope.winner = "Tie";
+                }else {
+                    $scope.winner = "Player 2";
                 }
                 $scope.showWinner();
             });
