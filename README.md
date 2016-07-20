@@ -26,37 +26,37 @@ More detail information here: [Jeopardy in Angular](https://chatasweetie.wordpre
 
 **Starting Board**
 
-<img src="static/2-board.png" height="150">
+<img src="static/2-board.png" height="250">
 
 **Question**
 
-<img src="static/3-question.png">
+<img src="static/3-question.png" height="250">
 
 **Answer**
 
-<img src="static/4-answer.png">
+<img src="static/4-answer.png" height="250">
 
 **Final Jeopardy Button**
 
-<img src="static/5-FinalJeopardy.png">
+<img src="static/5-FinalJeopardy.png" height="250">
 
 **Final Jeopardy Betting**
 
-<img src="static/6-bet.png">
+<img src="static/6-bet.png" height="250">
 
 **Final Jeopardy Question**
 
-<img src="static/7-finalJQuestion.png">
+<img src="static/7-finalJQuestion.png" height="250">
 
 **Winner**
 
-<img src="static/8-Winner.png">
+<img src="static/8-Winner.png" height="250">
 
 
 
-### About the Developers
+### About the Developers:
 Jessica Dene Earley      
-[Linkedin](https://www.linkedin.com/in/jessicaearley)    
-[Chatasweetie's Blog](https://chatasweetie.com/)    
+	[Linkedin](https://www.linkedin.com/in/jessicaearley)    
+	[Chatasweetie's Blog](https://chatasweetie.com/)    
 Leslie Castellanos     
-[Linkedin](https://www.linkedin.com/in/lesliecastellanos)
+	[Linkedin](https://www.linkedin.com/in/lesliecastellanos)
