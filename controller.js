@@ -77,7 +77,7 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
                                                 '400':
                                                     {'She was described as "The most coarse and vulgar woman in England. . ."' : 'Who is Ada?'},
                                                 '500':
-                                                    {'When she was younger she believed she could fly, and wrote illustrated a guide called “Flyology"' : 'Who is Ada?'},
+                                                    {'When she was younger she believed she could fly, and wrote illustrated a guide called Flyology' : 'Who is Ada?'},
                                                 },
                                 'Staff' : {
                                                 '100':
@@ -85,9 +85,9 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
                                                 '200':
                                                     {'Carried Stephen Hawking\'s wheelchair with him in it' : 'Who is Henry?'},
                                                 '300':
-                                                    {'Answer 2' : 'Who is Meggie?'},
+                                                    {'Has a betta fish - and talks to it A LOT' : 'Who is Meggie?'},
                                                 '400':
-                                                    {'This person\s great-great-great uncle was president of Mexico' : 'Who is Leslie?'},
+                                                    {'This persons great-great-great uncle was president of Mexico' : 'Who is Leslie?'},
                                                 '500':
                                                     {'Bungy jumped off the 3rd largest bungy jump distance in the world' : 'Who is Ally?'},
                                                 },
