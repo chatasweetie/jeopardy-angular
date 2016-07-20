@@ -54,9 +54,11 @@ More detail information here: [Jeopardy in Angular](https://chatasweetie.wordpre
 
 
 
-### About the Developers:
+About the Developers:
+---------------------
+
 Jessica Dene Earley      
-	[Linkedin](https://www.linkedin.com/in/jessicaearley)    
-	[Chatasweetie's Blog](https://chatasweetie.com/)    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Linkedin](https://www.linkedin.com/in/jessicaearley)    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Blog](https://chatasweetie.com/)    
 Leslie Castellanos     
-	[Linkedin](https://www.linkedin.com/in/lesliecastellanos)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Linkedin](https://www.linkedin.com/in/lesliecastellanos)
