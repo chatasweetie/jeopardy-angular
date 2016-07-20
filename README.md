@@ -22,11 +22,11 @@ More detail information here: [Jeopardy in Angular](https://chatasweetie.wordpre
 
 **Splash Screen**
 
-<img src="static/1-splash.png">
+<img src="static/1-splash.png" height="250">
 
 **Starting Board**
 
-<img src="static/2-board.png">
+<img src="static/2-board.png" height="150">
 
 **Question**
 
@@ -58,5 +58,5 @@ More detail information here: [Jeopardy in Angular](https://chatasweetie.wordpre
 Jessica Dene Earley      
 [Linkedin](https://www.linkedin.com/in/jessicaearley)    
 [Chatasweetie's Blog](https://chatasweetie.com/)    
-Leslie Castellanos
+Leslie Castellanos     
 [Linkedin](https://www.linkedin.com/in/lesliecastellanos)
