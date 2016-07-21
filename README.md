@@ -14,7 +14,7 @@ Users can click on the dollar amount and a modal pops up that allows players to 
 
 When the questions have all been answered, final jeopary button appears 
 
-More detail information here: [Jeopardy in Angular](https://chatasweetie.wordpress.com/)
+More detail information: [Jeopardy in Angular](https://chatasweetie.com/2016/07/21/jeopardy-in-angular/)
 
 
 
@@ -36,7 +36,7 @@ More detail information here: [Jeopardy in Angular](https://chatasweetie.wordpre
 
 <img src="static/4-answer.png" height="250">
 
-**Final Jeopardy Button**
+**Final Jeopardy Button Appears**
 
 <img src="static/5-FinalJeopardy.png" height="250">
 
