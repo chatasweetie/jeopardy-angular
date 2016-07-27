@@ -1,4 +1,4 @@
-var app = angular.module('gameApp', ['angularModalService']); 
+var app = angular.module('gameApp', ['angularModalService']);
 
 app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $log, ModalService) {
 	$scope.$log = $log;
@@ -22,7 +22,7 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
 												'100':
 													{'Is another name for Command Line': 'What is Shell, GUI, Terminal or Console?'},
 												'200':
-													{'It\s acronym is pwd.' : 'What is Print Working Directory?'},
+													{'Its acronym is pwd.' : 'What is Print Working Directory?'},
                                                 '300':
                                                     {'A command to see the built in manual' : 'What is "man"?'},
                                                 '400':
@@ -91,13 +91,13 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
                                                 '500':
                                                     {'Bungy jumped off the 3rd largest bungy jump distance in the world' : 'Who is Ally?'},
                                                 },
-                                }			
+                                }
                     };
 
     $scope.finaljeopardy = {
         'question': 'A style guide for python, its acronym is PEP',
         'answer': 'What are Python Enhancement Proposals?'
-    }
+    };
 
     $scope.init = function(){
         ModalService.showModal({
@@ -109,7 +109,7 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
             modal.close.then(function(result) {
             });
         });
-    }
+    };
 
     $scope.loss = function(player, dollars) {
         player.score -= Number(dollars);
@@ -233,7 +233,7 @@ app.controller('gameCtrl', ['$scope', '$log', 'ModalService', function($scope, $
 app.controller('ModalController', function($scope, close) {
   
  $scope.close = function(result) {
- 	close(result, 500); // close, but give 500ms for bootstrap to animate
+    close(result, 500); // close, but give 500ms for bootstrap to animate
  };
 
 });
